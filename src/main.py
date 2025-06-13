@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from waitress import serve
 from pathlib import Path
-from linknetgen import LinkNetGen
+from .linknetgen import LinkNetGen
 
 app = Flask(__name__, template_folder=Path(__file__).parent / "site")
 

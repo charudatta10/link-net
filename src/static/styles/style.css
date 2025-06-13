@@ -3,8 +3,9 @@
 :root {
     --bg-color: #011734;
     --general-font-color: #fff;
-    --link-container-color: rgba(3, 0, 15, 0.712);
+    --link-container-color: rgba(20, 180, 220, 0.126); /* Changed to a blue-ish tint with transparency */
     --link-font-color: #f6f8f9;
+    
 }
 
 @keyframes basic-fade {
@@ -154,10 +155,22 @@ body {
     cursor: pointer;
     transform: scale(1);
     transition: transform 100ms ease-in-out;
+    
+    /* Frosted glass effect */
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    
+    /* Border to enhance the glass effect */
+    border: 1px solid rgba(149, 183, 255, 0.2);
+    
+    /* Optional: subtle shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .link-container:hover {
     transform: scale(1.05);
+    background-color: rgba(100, 149, 237, 0.3); /* Slightly more opaque on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .link-container a {
