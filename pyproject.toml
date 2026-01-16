@@ -1,0 +1,29 @@
+[project]
+name = "link-net"
+version = "0.1.0"
+description = "Links aggregated repository"
+readme = "README.md"
+requires-python = ">=3.10.6"
+dependencies = []
+
+[tool.poe.tasks]
+
+# Build
+build = "python -m src.link_net"
+
+# Test
+test = "pytest tests/"
+
+# Type checking
+typecheck = "mypy link_net tests/"
+
+# Lint only
+ruff-check = "ruff check . --fix"
+
+# Format only
+ruff-format = "ruff format ."
+
+# Composite: run both lint + format
+ruff = ["ruff-check", "ruff-format"]
+
+

@@ -4,7 +4,10 @@ import json
 import logging
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
 
 class LinkNetGen:
     """
@@ -14,6 +17,7 @@ class LinkNetGen:
         template_path (Path): Path to the directory containing the template file.
         config_path (Path): Path to the directory containing the configuration file.
     """
+
     def __init__(self) -> None:
         self.template_path = Path(__file__).parent / "template"
         self.config_path = Path(__file__).parent
@@ -27,7 +31,9 @@ class LinkNetGen:
             Exception: For other exceptions during file reading.
         """
         try:
-            with open(self.template_path / "index.html", mode="r", encoding="utf-8") as template_file:
+            with open(
+                self.template_path / "index.html", mode="r", encoding="utf-8"
+            ) as template_file:
                 template_content = template_file.read()
             self.template = Template(template_content)
             logging.info("Template loaded successfully.")
@@ -48,7 +54,9 @@ class LinkNetGen:
             Exception: For other exceptions during file reading.
         """
         try:
-            with open(self.config_path / "config.json", mode="r", encoding="utf-8") as config_file:
+            with open(
+                self.config_path / "config.json", mode="r", encoding="utf-8"
+            ) as config_file:
                 self.data = json.load(config_file)
             logging.info("Configuration loaded successfully.")
         except FileNotFoundError as e:

@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-from waitress import serve
 from pathlib import Path
 from .linknetgen import LinkNetGen
 
