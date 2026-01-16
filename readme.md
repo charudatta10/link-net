@@ -13,7 +13,7 @@
 ![project](https://flat.badgen.net///static/project/LinkNet)
 
 <!-- Badges: Tools used -->
-`python` `just` `gig` `jinja2` `flask` 
+`python` `poe` `gig` `jinja2` `flask` 
 
 ## Documentation 🗎
 
@@ -31,7 +31,7 @@ Links aggregated repository.
 
 ## Getting Started 🌱
 
-Run `just` cmd in command prompt.
+Run `poe` cmd in command prompt.
 
 ✨[Report a 🐛 or Request a ⭐](https://github.com/charudatta10/LinkNet/issues)✨
 
